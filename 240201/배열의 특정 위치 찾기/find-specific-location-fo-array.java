@@ -2,32 +2,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        int[] arr = new int[10];
-
+        int[] numbers = new int[10];
         for (int i = 0; i < 10; i++) {
-            arr[i] = sc.nextInt();
+            numbers[i] = scanner.nextInt();
         }
 
         int evenSum = 0;
         for (int i = 1; i < 10; i += 2) {
-            evenSum += arr[i];
+            evenSum += numbers[i];
         }
 
-        int mul3Sum = 0;
-        int cnt = 0;
-        for (int num : arr) {
+        int multipleOf3Sum = 0;
+        int count = 0;
+        for (int num : numbers) {
             if (num % 3 == 0) {
-                mul3Sum += num;
-                cnt++;
+                multipleOf3Sum += num;
+                count++;
             }
         }
 
-        double avrg = (double) mul3Sum / cnt;
+        double averageOf3 = (double) multipleOf3Sum / count;
 
-        System.out.printf("%d %.1f\n", evenSum, avrg);
+        System.out.printf("%d %.1f\n", evenSum, averageOf3);
 
-        sc.close();
+        scanner.close();
     }
 }
