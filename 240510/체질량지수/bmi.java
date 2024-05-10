@@ -9,7 +9,7 @@ public class Main {
         
         double bmi = (double) w / ((double) h / 100 * (double) h / 100);
         
-        int roundedBMI = (int) Math.round(bmi * 10) / 10;
+        int roundedBMI = (int) Math.floor(bmi);
         
         System.out.println(roundedBMI);
         
